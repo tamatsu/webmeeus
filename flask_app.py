@@ -21,6 +21,7 @@ def hello_world():
     jp_end_lon, r = pymeeus.Sun.Sun.apparent_longitude_coarse(pymeeus.Epoch.Epoch(jp_end))
 
     return jsonify({
+        "datetime": now.isoformat() + "Z",
         "longitude": float(apparent_lon),
         "jp_begin_lon": float(jp_begin_lon),
         "jp_end_lon": float(jp_end_lon)
